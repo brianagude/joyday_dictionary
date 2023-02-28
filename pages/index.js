@@ -1,28 +1,23 @@
+import React from "react";
 import Head from 'next/head';
-import { marked } from 'marked';
 import getPosts from '../lib/getPosts';
 
-export default function Home({ posts }) {
+export default function Home({posts}) {
   return (
-    <div>
+    <div className="home-page">
       <Head>
-        <title>JOYDAY Dictionary</title>
+        <title>JOYDAY | Dictionary</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <main>
         <h1>JOYDAY Dictionary</h1>
-        <ul>
+        <div className="dictionary-list">
           {posts.map(post => (
-            <li key={post.id}>
-              <h3>{post.fields.name}</h3>
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: marked(post.fields.definition),
-                }}
-              />
-            </li>
+            <a key={post.id} href={post.route} className="dictionary-term">
+              {post.fields.name}
+            </a>
           ))}
-        </ul>
+        </div>
       </main>
     </div>
   );
