@@ -1,18 +1,93 @@
 import React from "react";
+import Head from 'next/head';
 import getPosts from "../lib/getPosts";
 import { marked } from "marked";
 
 export default function post({ post }) {
-  console.log(post);
   return (
-    <main>
-      <div className="container mx-auto w-full sm:w-10/12 md:w-8/12 lg:w-6/12 xl:w-6/12 p-4">
-        <h1 className="font-bold text-2xl">{post.fields.name}</h1>
-        <img src="https://picsum.photos/800/200" alt="random image" className=" max-w-full" />
+    <div className="home-page">
+      <Head>
+        <title>JOYDAY | {post.fields.name}</title>
+        <link rel='icon' href='/favicon.ico' />
+      </Head>
+      <main>
+        <div className="dictionary-item">
+          <div className="item-header">
+            <h5>Dictionary Term</h5>
+          </div>
+          <div className='item-content'>
+            <h3>{post.fields.name}</h3>
+            <div dangerouslySetInnerHTML={{ __html: marked(post.fields.definition) }} />
+          </div>
+        </div>
 
-        {/* <div dangerouslySetInnerHTML={{ __html: marked(post.description) }} className="mt-10"></div> */}
-      </div>
+        <div className="item-wrapper">
+          <div className="dictionary-item">
+            <div className="item-header">
+              <h5>Examples of {post.fields.name}</h5>
+            </div>
+            <div className='item-content'>
+              <div dangerouslySetInnerHTML={{ __html: marked(post.fields.examples) }} />
+            </div>
+          </div>
+
+          <div className="dictionary-item">
+            <div className="item-header">
+              <h5>What happens after dealing with {post.fields.name}?</h5>
+            </div>
+            <div className='item-content'>
+              <div dangerouslySetInnerHTML={{ __html: marked(post.fields.effects) }} />
+            </div>
+          </div>
+        </div>
+
+        <div className="dictionary-item">
+          <div className="item-header">
+            <h5>How to move forward</h5>
+          </div>
+          <div className='item-content'>
+            <div dangerouslySetInnerHTML={{ __html: marked(post.fields.moving_forward) }} />
+          </div>
+        </div>
+
+        <div className="dictionary-item">
+          <div className="item-header">
+            <h5>{post.fields.name} affirmation</h5>
+          </div>
+          <div className='item-content'>
+            <div dangerouslySetInnerHTML={{ __html: marked(post.fields.affirmation) }} />
+          </div>
+        </div>
+
+        <div className="item-wrapper">
+          <div className="dictionary-item">
+            <div className="item-header">
+              <h5>Sources</h5>
+            </div>
+            <div className='item-content'>
+              <div dangerouslySetInnerHTML={{ __html: marked(post.fields.sources) }} />
+            </div>
+          </div>
+
+          <div className="dictionary-item">
+            <div className="item-header">
+              <h5>Related Terms</h5>
+            </div>
+            <div className='item-content'>
+              <div>
+                {post.fields.related_terms.map(term => (
+                  console.log(term)
+                  // <a key={term.id} href={term.route} className="related-term">
+                  //   {term.name}
+                  // </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
     </main>
+    </div>
+    
   );
 }
 
@@ -40,15 +115,3 @@ export async function getStaticProps({ params }) {
     revalidate: 1,
   };
 }
-
-
-// export async function getStaticProps() {
-//   const posts = await getPosts();
-
-//   return {
-//     props: {
-//       posts,
-//       revalidate: 10, // In seconds 
-//     },
-//   };
-// }
