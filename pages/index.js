@@ -1,8 +1,21 @@
+import React from "react";
+import { useState, useEffect } from "react";
 import Head from 'next/head';
-import { marked } from 'marked';
 import getPosts from '../lib/getPosts';
+import { marked } from 'marked';
 
-export default function Home({ posts }) {
+export default function Home() {
+  const [posts, setPosts] = useState([]);
+
+  const getPosts_ = async () => {
+    const posts = await getPosts();
+    setPosts(posts);
+  }
+
+  useEffect(() => {
+    getPosts_();
+  }, []); 
+
   return (
     <div>
       <Head>
@@ -11,18 +24,22 @@ export default function Home({ posts }) {
       </Head>
       <main>
         <h1>JOYDAY Dictionary</h1>
-        <ul>
+        <div className="dictionary-list">
           {posts.map(post => (
-            <li key={post.id}>
+
+            <a key={post.id} href={post.id}>
               <h3>{post.fields.name}</h3>
+              {/* <p>{post.id}</p>
+              <p>{post.fields.route}</p>
+              <p>{post.fields.examples}</p>
               <div
                 dangerouslySetInnerHTML={{
                   __html: marked(post.fields.definition),
                 }}
-              />
-            </li>
+              /> */}
+            </a>
           ))}
-        </ul>
+        </div>
       </main>
     </div>
   );
