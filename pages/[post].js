@@ -22,68 +22,78 @@ export default function post({ post }) {
         </div>
 
         <div className="item-wrapper">
-          <div className="dictionary-item">
-            <div className="item-header">
-              <h5>Examples of {post.fields.name}</h5>
-            </div>
-            <div className='item-content'>
-              <div dangerouslySetInnerHTML={{ __html: marked(post.fields.examples) }} />
-            </div>
-          </div>
-
-          <div className="dictionary-item">
-            <div className="item-header">
-              <h5>What happens after dealing with {post.fields.name}?</h5>
-            </div>
-            <div className='item-content'>
-              <div dangerouslySetInnerHTML={{ __html: marked(post.fields.effects) }} />
-            </div>
-          </div>
-        </div>
-
-        <div className="dictionary-item">
-          <div className="item-header">
-            <h5>How to move forward</h5>
-          </div>
-          <div className='item-content'>
-            <div dangerouslySetInnerHTML={{ __html: marked(post.fields.moving_forward) }} />
-          </div>
-        </div>
-
-        <div className="dictionary-item">
-          <div className="item-header">
-            <h5>{post.fields.name} affirmation</h5>
-          </div>
-          <div className='item-content'>
-            <div dangerouslySetInnerHTML={{ __html: marked(post.fields.affirmation) }} />
-          </div>
-        </div>
-
-        <div className="item-wrapper">
-          <div className="dictionary-item">
-            <div className="item-header">
-              <h5>Sources</h5>
-            </div>
-            <div className='item-content'>
-              <div dangerouslySetInnerHTML={{ __html: marked(post.fields.sources) }} />
-            </div>
-          </div>
-
-          <div className="dictionary-item">
-            <div className="item-header">
-              <h5>Related Terms</h5>
-            </div>
-            <div className='item-content'>
-              <div>
-                {post.fields.related_terms.map(term => (
-                  console.log(term)
-                  // <a key={term.id} href={term.route} className="related-term">
-                  //   {term.name}
-                  // </a>
-                ))}
+          {post.fields.examples && 
+            <div className="dictionary-item">
+              <div className="item-header">
+                <h5>Examples of {post.fields.name}</h5>
+              </div>
+              <div className='item-content'>
+                <div dangerouslySetInnerHTML={{ __html: marked(post.fields.examples) }} />
               </div>
             </div>
+          }
+          {post.fields.effects && 
+            <div className="dictionary-item">
+              <div className="item-header">
+                <h5>What happens after dealing with {post.fields.name}?</h5>
+              </div>
+              <div className='item-content'>
+                <div dangerouslySetInnerHTML={{ __html: marked(post.fields.effects) }} />
+              </div>
+            </div>
+          }
+        </div>
+
+        {post.fields.moving_forward && 
+          <div className="dictionary-item">
+            <div className="item-header">
+              <h5>How to move forward</h5>
+            </div>
+            <div className='item-content'>
+              <div dangerouslySetInnerHTML={{ __html: marked(post.fields.moving_forward) }} />
+            </div>
           </div>
+        }
+
+        {post.fields.affirmation && 
+          <div className="dictionary-item">
+            <div className="item-header">
+              <h5>{post.fields.name} affirmation</h5>
+            </div>
+            <div className='item-content'>
+              <div dangerouslySetInnerHTML={{ __html: marked(post.fields.affirmation) }} />
+            </div>
+          </div>
+        }
+        
+        <div className="item-wrapper">
+          {post.fields.sources && 
+            <div className="dictionary-item">
+              <div className="item-header">
+                <h5>Sources</h5>
+              </div>
+              <div className='item-content'>
+                <div dangerouslySetInnerHTML={{ __html: marked(post.fields.sources) }} />
+              </div>
+            </div>
+          }
+          {post.fields.related_terms && 
+            <div className="dictionary-item">
+              <div className="item-header">
+                <h5>Related Terms</h5>
+              </div>
+              <div className='item-content'>
+                <div>
+                  {post.fields.related_terms.map(term => (
+                    console.log(term)
+                    // <a key={term.id} href={term.route} className="related-term">
+                    //   {term.name}
+                    // </a>
+                  ))}
+                </div>
+              </div>
+            </div>
+          }
         </div>
     </main>
     </div>
