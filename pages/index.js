@@ -8,6 +8,7 @@ export default function Home({posts}) {
       <Head>
         <title>JOYDAY | Dictionary</title>
         <link rel='icon' href='/favicon.ico' />
+        {/* <style jsx>{styles }</style> */}
       </Head>
       <main>
         <h1>JOYDAY Dictionary</h1>
