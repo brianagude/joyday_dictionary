@@ -21,7 +21,7 @@ export default function Home({posts}) {
         <div className='content-wrapper'>
           <h2>JOYDAY Dictionary</h2>
           <div className="dictionary-list">
-            {posts.map(post => (
+            {posts.reverse().map(post => (
               <Link 
                 key={post.id} 
                 href={post.route} 
