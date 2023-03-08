@@ -17,8 +17,8 @@ export const SidebarLeft = () => {
           />
         </a>
         
-        <nav class='site-nav'>
-          <a href='/' class='nav-link'>
+        <nav className='site-nav'>
+          <a href='/' className='nav-link'>
             <Image
               src="/images/home.svg"
               alt="Home Icon"
@@ -27,7 +27,7 @@ export const SidebarLeft = () => {
             />
             Home
           </a>
-          <a href='/' class='nav-link'>
+          <a href='/' className='nav-link'>
             <Image
               src="/images/info.svg"
               alt="Information Icon"
@@ -36,7 +36,7 @@ export const SidebarLeft = () => {
             />
             About
           </a>
-          <a href='/' class='nav-link'>
+          <a href='/' className='nav-link'>
             <Image
               src="/images/tv.svg"
               alt="TV Icon"
@@ -57,7 +57,7 @@ export const SidebarLeft = () => {
             />
             <b>Dictionary</b>
           </Link>
-          <a href='/' class='nav-link'>
+          <a href='/' className='nav-link'>
             <Image
               src="/images/cart.svg"
               alt="Shop Icon"
@@ -66,7 +66,7 @@ export const SidebarLeft = () => {
             />
             Shop
           </a>
-          <a href='/' class='nav-link'>
+          <a href='/' className='nav-link'>
             <Image
               src="/images/mail.svg"
               alt="Mail Icon"
@@ -75,7 +75,7 @@ export const SidebarLeft = () => {
             />
             Contact
           </a>
-          <a href='/' class='nav-link'>
+          <a href='/' className='nav-link'>
             <Image
               src="/images/question.svg"
               alt="FAQ"

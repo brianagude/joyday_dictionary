@@ -19,8 +19,8 @@ export default function Home({posts}) {
         <SidebarLeft/>
         <Header/>
         <div className='content-wrapper'>
-          <h2>JOYDAY Dictionary</h2>
-          <div className="dictionary-list">
+          <h2 className='title'>JOYDAY Dictionary</h2>
+          <div className="dictionary-terms">
             {posts.reverse().map(post => (
               <Link 
                 key={post.id} 
