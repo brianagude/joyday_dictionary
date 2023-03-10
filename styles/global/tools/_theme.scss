@@ -111,7 +111,7 @@ footer {
   @extend %global-style;
   padding: 40px 0;
   height: calc(100vh - 32px);
-  display: none !important;
+  display: none;
 
   @include bp(md){ display: block; }
 
