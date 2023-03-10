@@ -25,15 +25,17 @@ export default function Home({posts}) {
               <Link 
                 key={post.id} 
                 href={post.route} 
-                className="dictionary-term"
+                
               >
-                {post.fields.name}
-                <Image
-                  src="/images/arrow.svg"
-                  alt="Arrow Icon"
-                  width={24}
-                  height={24}
-                />
+                <div className="dictionary-term">
+                  {post.fields.name}
+                  <Image
+                    src="/images/arrow.svg"
+                    alt="Arrow Icon"
+                    width={24}
+                    height={24}
+                  />
+                </div>
               </Link>
             ))}
           </div>

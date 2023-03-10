@@ -66,13 +66,15 @@ export const Header = () => {
               href="/"
               className="nav-link"
             >
-              <Image
-                src="/images/books.svg"
-                alt="Dictionary Terms"
-                width={24}
-                height={24}
-              />
-              <b>Dictionary</b>
+              <div>
+                <Image
+                  src="/images/books.svg"
+                  alt="Dictionary Terms"
+                  width={24}
+                  height={24}
+                />
+                <b>Dictionary</b>
+              </div>
             </Link>
             <a href='/' class='nav-link'>
               <Image

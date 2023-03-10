@@ -10,7 +10,7 @@ import { SidebarRight } from '../components/sidebar-right'
 export default function post({ post, posts }) {
   console.log(posts)
   return (
-    <div className="home-page">
+    <div className="term-page">
       <Head>
         <title>JOYDAY | {post.fields.name}</title>
         <link rel='icon' href='/favicon.ico' />

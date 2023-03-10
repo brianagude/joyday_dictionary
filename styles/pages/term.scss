@@ -1,0 +1,67 @@
+.term-page {
+  @counter-style dash {
+    system: cyclic;
+    symbols: "\1F44D";
+    suffix: " ";
+  }
+
+  @counter-style arrow {
+    system: cyclic;
+    symbols: url(/images/arrow-small.svg);
+    suffix: " ";
+  }
+
+  .dictionary-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .dictionary-item {
+    background: #FEFDFB;
+    border: 1px solid #A37A56;
+    border-radius: 16px;
+    box-shadow: -4px 4px 8px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+
+    &:hover {
+      box-shadow: none;
+      transform: translate(-2px, 2px);
+
+      .item-header {
+        background: #A37A56;
+        h5 { color: #FEFDFB; }
+      }
+    }
+
+    ul {
+      padding-left: 24px;
+      list-style: arrow;
+    }
+  }
+
+  .item-header {
+    padding: 8px;
+    border-bottom: 1px solid #A37A56;
+    width: 100%;
+    text-align: left;
+    background: #FBF5EB;
+
+    h5 {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.2;
+      color: #A37A56;
+    }
+  }
+
+  .item-content {
+    padding: 16px;
+  }
+
+  .item-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 8px;
+  }
+}
