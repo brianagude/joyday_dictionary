@@ -19,7 +19,7 @@ export const SidebarRight = () => {
         </form>
         <div className='nav-copyright'>
           <nav className='social-links'>
-            <a href='/'>
+            <a href='https://www.brianagude.com'>
               <Image
                 src="/images/twitter.svg"
                 alt="Joyday Logo"
@@ -28,7 +28,7 @@ export const SidebarRight = () => {
                 className='site-logo'
               />
             </a>
-            <a href='/'>
+            <a href='https://www.brianagude.com'>
               <Image
                 src="/images/instagram.svg"
                 alt="Joyday Logo"
@@ -37,7 +37,7 @@ export const SidebarRight = () => {
                 className='site-logo'
               />
             </a>
-            <a href='/'>
+            <a href='https://www.brianagude.com'>
               <Image
                 src="/images/facebook.svg"
                 alt="Joyday Logo"
@@ -46,7 +46,7 @@ export const SidebarRight = () => {
                 className='site-logo'
               />
             </a>
-            <a href='/'>
+            <a href='https://www.brianagude.com'>
               <Image
                 src="/images/mail.svg"
                 alt="Joyday Logo"

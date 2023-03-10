@@ -6,7 +6,7 @@ export const Footer = () => {
   return (
     <footer id='footer' className='site-footer'>
       <div className="container">
-        <a href='/'>
+        <a href='https://www.brianagude.com'>
           <Image
             src="/images/logo.svg"
             alt="Joyday Logo"
@@ -29,7 +29,7 @@ export const Footer = () => {
         </form>
         <div className='nav-copyright'>
           <nav className='social-links'>
-            <a href='/'>
+            <a href='https://www.brianagude.com'>
               <Image
                 src="/images/twitter.svg"
                 alt="Joyday Logo"
@@ -38,7 +38,7 @@ export const Footer = () => {
                 className='site-logo'
               />
             </a>
-            <a href='/'>
+            <a href='https://www.brianagude.com'>
               <Image
                 src="/images/instagram.svg"
                 alt="Joyday Logo"
@@ -47,7 +47,7 @@ export const Footer = () => {
                 className='site-logo'
               />
             </a>
-            <a href='/'>
+            <a href='https://www.brianagude.com'>
               <Image
                 src="/images/facebook.svg"
                 alt="Joyday Logo"
@@ -56,7 +56,7 @@ export const Footer = () => {
                 className='site-logo'
               />
             </a>
-            <a href='/'>
+            <a href='https://www.brianagude.com'>
               <Image
                 src="/images/mail.svg"
                 alt="Joyday Logo"

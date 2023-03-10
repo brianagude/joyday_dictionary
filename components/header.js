@@ -10,22 +10,34 @@ export const Header = () => {
       <header id='header' className='site-header'>
         <div className="container">
           <button className='menu-toggle' onClick={()=>setShowMenu(true)}>
-            <img className="open-icon" src="/images/menu.svg" alt="menu icon" />
+            <Image
+              src="/images/menu.svg"
+              alt="menu icon"
+              width={24}
+              height={18}
+              className='open-icon'
+            />
           </button>
           <Link 
             href="/"
           >
             <div className='site-logo'>
               <Image
-              src="/images/logo.svg"
-              alt="Joyday Logo"
-              width={120}
-              height={20}
-            />
+                src="/images/logo.svg"
+                alt="Joyday Logo"
+                width={120}
+                height={20}
+              />
             </div>
           </Link>
-          <a href='/'>
-            <img className="open-icon" src="/images/cart.svg" alt="cart icon" />
+          <a href='https://www.brianagude.com'>
+            <Image
+              src="/images/cart.svg"
+              alt="cart icon"
+              width={24}
+              height={24}
+              className="open-icon"
+            />
           </a>
         </div>
       </header>

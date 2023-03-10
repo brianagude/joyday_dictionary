@@ -7,7 +7,7 @@ export const SidebarLeft = () => {
   return (
     <div id='leftbar' className='sidebar-left sidebar'>
       <div className="container">
-        <a href='/'>
+        <a href='https://www.brianagude.com'>
           <Image
             src="/images/logo.svg"
             alt="Joyday Logo"
