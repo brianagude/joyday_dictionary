@@ -1,25 +1,17 @@
 .term-page {
-  @counter-style dash {
-    system: cyclic;
-    symbols: "\1F44D";
-    suffix: " ";
-  }
-
-  @counter-style arrow {
-    system: cyclic;
-    symbols: url(/images/arrow-small.svg);
-    suffix: " ";
-  }
-
   .dictionary-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 8px;
+
+    @include bp(sm){
+      grid-template-columns: 1fr 1fr;
+    }
   }
 
   .dictionary-item {
-    background: #FEFDFB;
-    border: 1px solid #A37A56;
+    background: $white;
+    border: 1px solid $brown;
     border-radius: 16px;
     box-shadow: -4px 4px 8px rgba(0, 0, 0, 0.25);
     overflow: hidden;
@@ -29,39 +21,89 @@
       transform: translate(-2px, 2px);
 
       .item-header {
-        background: #A37A56;
-        h5 { color: #FEFDFB; }
+        background: $brown;
+        h5 { color: $white; }
       }
     }
 
     ul {
       padding-left: 24px;
-      list-style: arrow;
+      list-style: '—  ';
     }
   }
 
   .item-header {
     padding: 8px;
-    border-bottom: 1px solid #A37A56;
+    border-bottom: 1px solid $brown;
     width: 100%;
     text-align: left;
-    background: #FBF5EB;
+    background: $cream;
 
     h5 {
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 1.2;
-      color: #A37A56;
+      color: $brown;
     }
   }
 
   .item-content {
     padding: 16px;
+
+    p + * { margin-top: 12px; }
+    p + p { margin-top: 8px; }
+
+    a { 
+      font-weight: 500; 
+      text-decoration: underline;
+    }
+
+    li + li { margin-top: 4px; }
+
+    &.links {
+      a {
+        @extend %k3;
+        text-decoration: none; 
+      }
+      
+      ul { 
+        list-style: none; 
+        padding: 0;
+      }
+
+      li {
+        padding: 8px;
+        border-radius: 8px;
+        
+        a {
+          border-bottom: 1px solid $black;
+          padding-bottom: 2px;
+          width: 100%; 
+          display: block;
+          position: relative;
+
+          &:after {
+            content: url('/images/arrow-small.svg');
+            position: absolute;
+            bottom: 2px;
+            right: 4px;
+          }
+        }
+        
+        &:hover {
+          cursor: pointer;
+          background: lighten($brown, 40%);
+        }
+      }
+    }
   }
 
   .item-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    @include bp(md){
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 8px;
+    }
   }
 }

@@ -17,8 +17,8 @@ export default function Home({posts}) {
       </Head>
       <main>
         <SidebarLeft/>
-        <Header/>
         <div className='content-wrapper'>
+          <Header/>
           <h2 className='title'>JOYDAY Dictionary</h2>
           <div className="dictionary-terms">
             {posts.reverse().map(post => (

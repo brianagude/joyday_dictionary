@@ -30,30 +30,19 @@ export default function post({ post, posts }) {
               </div>
             </div>
 
-            <div className="item-wrapper">
-              {post.fields.examples && 
-                <div className="dictionary-item">
-                  <div className="item-header">
-                    <h5>Examples of {post.fields.name}</h5>
-                  </div>
-                  <div className='item-content'>
-                    <div dangerouslySetInnerHTML={{ __html: marked(post.fields.examples) }} />
-                  </div>
+            {post.fields.examples && 
+              <div className="dictionary-item">
+                <div className="item-header">
+                  <h5>Examples of {post.fields.name}</h5>
                 </div>
-              }
-              {post.fields.effects && 
-                <div className="dictionary-item">
-                  <div className="item-header">
-                    <h5>What happens after dealing with {post.fields.name}?</h5>
-                  </div>
-                  <div className='item-content'>
-                    <div dangerouslySetInnerHTML={{ __html: marked(post.fields.effects) }} />
-                  </div>
+                <div className='item-content'>
+                  <div dangerouslySetInnerHTML={{ __html: marked(post.fields.examples) }} />
                 </div>
-              }
-            </div>
+              </div>
+            }
 
-            {post.fields.moving_forward && 
+            {/* <div className="item-wrapper"> */}
+              {post.fields.moving_forward && 
               <div className="dictionary-item">
                 <div className="item-header">
                   <h5>How to move forward</h5>
@@ -74,14 +63,26 @@ export default function post({ post, posts }) {
                 </div>
               </div>
             }
+            {/* </div> */}
+
+            {post.fields.effects && 
+                <div className="dictionary-item">
+                  <div className="item-header">
+                    <h5>What happens after dealing with {post.fields.name}?</h5>
+                  </div>
+                  <div className='item-content'>
+                    <div dangerouslySetInnerHTML={{ __html: marked(post.fields.effects) }} />
+                  </div>
+                </div>
+              }
             
-            <div className="item-wrapper">
+            {/* <div className="item-wrapper"> */}
               {post.fields.sources && 
                 <div className="dictionary-item">
                   <div className="item-header">
                     <h5>Sources</h5>
                   </div>
-                  <div className='item-content'>
+                  <div className='item-content links'>
                     <div dangerouslySetInnerHTML={{ __html: marked(post.fields.sources) }} />
                   </div>
                 </div>
@@ -91,7 +92,7 @@ export default function post({ post, posts }) {
                   <div className="item-header">
                     <h5>Related Terms</h5>
                   </div>
-                  <div className='item-content'>
+                  <div className='item-content links'>
                     <div>
                       {post.fields.related_terms.map(term => (
                         console.log(term)
@@ -103,7 +104,7 @@ export default function post({ post, posts }) {
                   </div>
                 </div>
               }
-          </div>
+          {/* </div> */}
         </div>
         <Footer/>
       </div>

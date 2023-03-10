@@ -48,7 +48,7 @@ export const SidebarLeft = () => {
           <Link 
             href="/"
           >
-            <div className="nav-link">
+            <div className="nav-link active">
               <Image
                 src="/images/books.svg"
                 alt="Dictionary Terms"
@@ -85,10 +85,10 @@ export const SidebarLeft = () => {
             />
             FAQ
           </a>
-          <a className='btn' href='/'>
-            Check In
-          </a>
         </nav>
+        <a className='btn' href='/'>
+          Check In
+        </a>
       </div>
     </div>
   )

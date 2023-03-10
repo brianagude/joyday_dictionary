@@ -12,15 +12,18 @@ export const Header = () => {
           <button className='menu-toggle' onClick={()=>setShowMenu(true)}>
             <img className="open-icon" src="/images/menu.svg" alt="menu icon" />
           </button>
-          <a href='/'>
-            <Image
+          <Link 
+            href="/"
+          >
+            <div className='site-logo'>
+              <Image
               src="/images/logo.svg"
               alt="Joyday Logo"
               width={120}
               height={20}
-              className='site-logo'
             />
-          </a>
+            </div>
+          </Link>
           <a href='/'>
             <img className="open-icon" src="/images/cart.svg" alt="cart icon" />
           </a>
