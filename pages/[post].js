@@ -1,6 +1,7 @@
 import React from "react";
 import Head from 'next/head';
 import getPosts from "../lib/getPosts";
+import Link from 'next/link'
 import { marked } from "marked";
 import { Header } from '../components/header'
 import { Footer } from '../components/footer'
@@ -8,7 +9,6 @@ import { SidebarLeft } from '../components/sidebar-left'
 import { SidebarRight } from '../components/sidebar-right'
 
 export default function post({ post, posts }) {
-  console.log(posts)
   return (
     <div className="term-page">
       <Head>
@@ -43,8 +43,7 @@ export default function post({ post, posts }) {
               </div>
             }
 
-            {/* <div className="item-wrapper"> */}
-              {post.fields.moving_forward && 
+            {post.fields.moving_forward && 
               <div className="dictionary-item">
                 <div className="item-header">
                   <h5>How to move forward</h5>
@@ -65,7 +64,6 @@ export default function post({ post, posts }) {
                 </div>
               </div>
             }
-            {/* </div> */}
 
             {post.fields.effects && 
                 <div className="dictionary-item">
@@ -78,7 +76,6 @@ export default function post({ post, posts }) {
                 </div>
               }
             
-            {/* <div className="item-wrapper"> */}
               {post.fields.sources && 
                 <div className="dictionary-item">
                   <div className="item-header">
@@ -96,18 +93,27 @@ export default function post({ post, posts }) {
                   </div>
                   <div className='item-content links'>
                     <div>
-                      {post.fields.related_terms.map(term => (
-                        console.log(term)
-                        // <a key={term.id} href={term.route} className="related-term">
-                        //   {term.name}
-                        // </a>
-                      ))}
+                      <ul>
+                        {post.fields.related_terms.map(term => (
+                          posts.map(item => (
+                            item.id === term && (
+                              <Link 
+                                key={post.id} 
+                                href={item.route}
+                              >
+                                <li>
+                                  <a>{item.fields.name}</a>
+                                </li>
+                              </Link>
+                            )
+                          ))
+                        ))}
+                      </ul>
                     </div>
                   </div>
                 </div>
               }
-          {/* </div> */}
-        </div>
+          </div>
         <Footer/>
       </div>
       <SidebarRight/>
@@ -137,6 +143,7 @@ export async function getStaticProps({ params }) {
   return {
     props: {
       post,
+      posts
     },
     revalidate: 1,
   };

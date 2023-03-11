@@ -27,10 +27,9 @@ export default function Home({posts}) {
             {posts.reverse().map(post => (
               <Link 
                 key={post.id} 
-                href={post.route} 
-                
+                href={post.route}
               >
-                <div className="dictionary-term">
+                <a className="dictionary-term">
                   {post.fields.name}
                   <Image
                     src="/images/arrow.svg"
@@ -38,7 +37,7 @@ export default function Home({posts}) {
                     width={20}
                     height={20}
                   />
-                </div>
+                </a>
               </Link>
             ))}
           </div>

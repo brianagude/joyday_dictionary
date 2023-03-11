@@ -5,6 +5,11 @@
     gap: 8px;
   }
 
+  .sidebar-left .dictionary-link {
+    font-weight: bold;
+    background: lighten($brown, 40%);
+  }
+
   .dictionary-term {
     @extend %global-style;
     display: flex;
