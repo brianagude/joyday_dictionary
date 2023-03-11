@@ -19,21 +19,26 @@ export default function Home({posts}) {
         <SidebarLeft/>
         <Header/>
         <div className='content-wrapper'>
-          <h2 className='title'>JOYDAY Dictionary</h2>
+          <div className='intro'>
+            <h3>Welcome to JOYDAY Dictionary</h3>
+            <p>lil blurb about joyday dictionary</p>
+          </div>
           <div className="dictionary-terms">
             {posts.reverse().map(post => (
               <Link 
                 key={post.id} 
                 href={post.route} 
-                className="dictionary-term"
+                
               >
-                {post.fields.name}
-                <Image
-                  src="/images/arrow.svg"
-                  alt="Arrow Icon"
-                  width={24}
-                  height={24}
-                />
+                <div className="dictionary-term">
+                  {post.fields.name}
+                  <Image
+                    src="/images/arrow.svg"
+                    alt="Arrow Icon"
+                    width={20}
+                    height={20}
+                  />
+                </div>
               </Link>
             ))}
           </div>

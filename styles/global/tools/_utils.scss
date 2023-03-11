@@ -1,0 +1,193 @@
+$border-color: rgba(0, 0, 0, 0.15);
+$border-color-white: rgba(255, 255, 255, 0.15);
+
+$type-headline-lg: 48px;
+$type-headline-med: 40px;
+$type-headline-sm: 32px;
+$type-body-lg: 24px;
+$type-body-med: 16px;
+
+$line-global: 1.2;
+
+$standard-border: 1px solid $brown;
+
+// screen widths -----------------------------------------------------------------------------------------------------
+$screen-xs-min: 424px !default;
+$screen-sm-min: 768px !default;
+$screen-md-min: 1024px !default;
+$screen-lg-min: 1280px !default;
+$screen-xl-min: 1440px !default;
+$screen-xxl-min: 1920px !default;
+
+// breakpoints -----------------------------------------------------------------------------------------------------
+
+
+// helpers -----------------------------------------------------------------------------------------------------
+$base-unit: 16px;
+
+
+// Utility Classes
+.visually-hidden,
+%visually-hidden {
+  /* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.two-columns {
+  grid-template-columns: 1fr 1fr;
+}
+
+.border-bottom,
+%border-bottom {
+  border-bottom: $standard-border;
+}
+
+%visually-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.drop-shadow,
+%drop-shadow {
+  box-shadow: 20px 20px 0px 1px $black;
+  filter: drop-shadow(20px 20px 0px $white);
+  -webkit-filter: drop-shadow(20px 20px 0px $white);
+}
+
+.full-height,
+%full-height {
+  min-height: calc(100vh - 64px);
+
+  @include bp(sm) {
+    min-height: calc(100vh - 88px);
+  }
+}
+
+.d-none {
+  display: none;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-xs-none {
+  @include bp(xs) {
+    display: none;
+  }
+}
+
+.d-sm-none {
+  @include bp(sm) {
+    display: none;
+  }
+}
+
+.d-md-none {
+  @include bp(md) {
+    display: none;
+  }
+}
+
+.d-lg-none {
+  @include bp(lg) {
+    display: none;
+  }
+}
+
+.d-xl-none {
+  @include bp(xl) {
+    display: none;
+  }
+}
+
+.d-sm-only {
+  display: none;
+
+  @include bp(sm) {
+    display: block;
+  }
+
+  @include bp(md) {
+    display: none;
+  }
+}
+
+.d-tablet-only {
+  display: none;
+
+  @include bp(sm) {
+    display: block;
+  }
+
+  @include bp(lg) {
+    display: none;
+  }
+}
+
+.d-md-only {
+  display: none;
+
+  @include bp(md) {
+    display: block;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.cta-block {
+  margin-top: 20px;
+
+  @include bp(sm) {
+    margin-top: 32px;
+  }
+}
+
+%default-padding {
+  padding: 40px 0;
+
+  @include bp(sm) {
+    padding: 48px 0;
+  }
+
+  @include bp(md) {
+    padding: 100px 0;
+  }
+
+  .container {
+    padding: 0 16px;
+
+    @include bp(sm) {
+      padding: 0 24px;
+    }
+
+    @include bp(md) {
+      padding: 0 64px;
+    }
+  }
+}
+
+
+
+

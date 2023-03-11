@@ -10,19 +10,34 @@ export const Header = () => {
       <header id='header' className='site-header'>
         <div className="container">
           <button className='menu-toggle' onClick={()=>setShowMenu(true)}>
-            <img className="open-icon" src="/images/menu.svg" alt="menu icon" />
-          </button>
-          <a href='/'>
             <Image
-              src="/images/logo.svg"
-              alt="Joyday Logo"
-              width={120}
-              height={20}
-              className='site-logo'
+              src="/images/menu.svg"
+              alt="menu icon"
+              width={24}
+              height={18}
+              className='open-icon'
             />
-          </a>
-          <a href='/'>
-            <img className="open-icon" src="/images/cart.svg" alt="cart icon" />
+          </button>
+          <Link 
+            href="/"
+          >
+            <div className='site-logo'>
+              <Image
+                src="/images/logo.svg"
+                alt="Joyday Logo"
+                width={120}
+                height={20}
+              />
+            </div>
+          </Link>
+          <a href='https://www.brianagude.com'>
+            <Image
+              src="/images/cart.svg"
+              alt="cart icon"
+              width={24}
+              height={24}
+              className="open-icon"
+            />
           </a>
         </div>
       </header>
@@ -66,13 +81,15 @@ export const Header = () => {
               href="/"
               className="nav-link"
             >
-              <Image
-                src="/images/books.svg"
-                alt="Dictionary Terms"
-                width={24}
-                height={24}
-              />
-              <b>Dictionary</b>
+              <div>
+                <Image
+                  src="/images/books.svg"
+                  alt="Dictionary Terms"
+                  width={24}
+                  height={24}
+                />
+                <b>Dictionary</b>
+              </div>
             </Link>
             <a href='/' class='nav-link'>
               <Image

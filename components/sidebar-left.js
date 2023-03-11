@@ -7,7 +7,7 @@ export const SidebarLeft = () => {
   return (
     <div id='leftbar' className='sidebar-left sidebar'>
       <div className="container">
-        <a href='/'>
+        <a href='https://www.brianagude.com'>
           <Image
             src="/images/logo.svg"
             alt="Joyday Logo"
@@ -47,15 +47,16 @@ export const SidebarLeft = () => {
           </a>
           <Link 
             href="/"
-            className="nav-link"
           >
-            <Image
-              src="/images/books.svg"
-              alt="Dictionary Terms"
-              width={24}
-              height={24}
-            />
-            <b>Dictionary</b>
+            <div className="nav-link active">
+              <Image
+                src="/images/books.svg"
+                alt="Dictionary Terms"
+                width={24}
+                height={24}
+              />
+              <b>Dictionary</b>
+            </div>
           </Link>
           <a href='/' className='nav-link'>
             <Image
@@ -84,10 +85,10 @@ export const SidebarLeft = () => {
             />
             FAQ
           </a>
-          <a className='btn' href='/'>
-            Check In
-          </a>
         </nav>
+        <a className='btn' href='/'>
+          Check In
+        </a>
       </div>
     </div>
   )
