@@ -17,6 +17,7 @@
 
 .btn {
   font-weight: 800;
+  text-align: center;
   @extend %t1;
   text-transform: capitalize;
   color: $cream;
@@ -24,6 +25,7 @@
   padding: 8px 24px;
   border-radius: 1000px;
   width: fit-content;
+  display: block;
 
   background: $blue;
   border: 1px solid $cream;
@@ -45,21 +47,62 @@
   padding: 8px;
   border-radius: 8px;
 
-  &.active {
-    font-weight: bold;
-    background: lighten($brown, 40%);
-  }
-
   &:hover {
     font-weight: bold;
-    cursor: pointer;
     background: lighten($brown, 40%);
   }
+}
+
+.slide-in-menu {
+  @extend %global-style;
+  padding: 16px 8px;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  z-index: 10;
+  width: 288px;
+  background: #4E5FD2;
+  border: 1px solid #0A0E29;
+  transform: translate(200%, 200%);
+  transition: transform 0.3s ease;
+
+  &.active {
+    transform: none;
+  }
+
+  .nav-link {
+    color: $primary; 
+    font-weight: 600;
+
+    &:hover {
+      background: lighten($secondary, 10%);
+    }
+  }
+
+  .btn { 
+    margin-top: 24px; 
+    width: 100%;
+    background: #FBC825;
+    border: 1px solid #0A0E29;
+    box-shadow: 2px 3px 0px #0A0E29;
+    color: $black;
+
+    &:hover {
+      box-shadow: none; 
+    }
+    
+  }
+
+  @include bp(md){ display: none !important; }
 }
 
 header {
   padding: 16px 0;
   @extend %global-style;
+  position: sticky;
+  top: 16px;
+  left: 16px;
+  z-index: 10;
   
   @include bp(md){
     display: none;
@@ -169,7 +212,6 @@ footer {
     @extend %t2;
     color: $brown;
     width: 100%;
-    // height: 100
     border: none;
     padding: 8px 12px;
     border-right: 1px solid $brown;
@@ -178,6 +220,7 @@ footer {
 
     &::placeholder {
       @extend %t2;
+      font-family: $font-text;
       color: lighten($brown, 20%);
       font-weight: 300;
     }
@@ -188,8 +231,6 @@ footer {
   }
 
   button {
-    // width: 54px;
-    // height: 35px;
     height: 100%;
     width: 100%;
     display: flex;

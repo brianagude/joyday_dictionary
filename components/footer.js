@@ -34,36 +34,36 @@ export const Footer = () => {
             <a href='https://www.brianagude.com'>
               <Image
                 src="/images/twitter.svg"
-                alt="Joyday Logo"
-                width={18}
-                height={18}
+                alt="twitter icon"
+                width={20}
+                height={20}
                 className='site-logo'
               />
             </a>
             <a href='https://www.brianagude.com'>
               <Image
                 src="/images/instagram.svg"
-                alt="Joyday Logo"
-                width={18}
-                height={18}
+                alt="instagram icon"
+                width={20}
+                height={20}
                 className='site-logo'
               />
             </a>
             <a href='https://www.brianagude.com'>
               <Image
                 src="/images/facebook.svg"
-                alt="Joyday Logo"
-                width={18}
-                height={18}
+                alt="facebook icon"
+                width={20}
+                height={20}
                 className='site-logo'
               />
             </a>
             <a href='https://www.brianagude.com'>
               <Image
                 src="/images/mail.svg"
-                alt="Joyday Logo"
-                width={18}
-                height={18}
+                alt="mail icon"
+                width={20}
+                height={20}
                 className='site-logo'
               />
             </a>

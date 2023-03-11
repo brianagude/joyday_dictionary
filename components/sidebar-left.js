@@ -48,7 +48,7 @@ export const SidebarLeft = () => {
           <Link 
             href="/"
           >
-            <div className="nav-link active">
+            <a className="nav-link dictionary-link">
               <Image
                 src="/images/books.svg"
                 alt="Dictionary Terms"
@@ -56,7 +56,7 @@ export const SidebarLeft = () => {
                 height={24}
               />
               <b>Dictionary</b>
-            </div>
+            </a>
           </Link>
           <a href='/' className='nav-link'>
             <Image
@@ -86,7 +86,7 @@ export const SidebarLeft = () => {
             FAQ
           </a>
         </nav>
-        <a className='btn' href='/'>
+        <a className='btn' href='https://joyday.typeform.com/check-in'>
           Check In
         </a>
       </div>

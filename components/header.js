@@ -9,7 +9,7 @@ export const Header = () => {
     <>
       <header id='header' className='site-header'>
         <div className="container">
-          <button className='menu-toggle' onClick={()=>setShowMenu(true)}>
+          <button className='menu-toggle' onClick={()=>setShowMenu(!showMenu)}>
             <Image
               src="/images/menu.svg"
               alt="menu icon"
@@ -21,14 +21,14 @@ export const Header = () => {
           <Link 
             href="/"
           >
-            <div className='site-logo'>
+            <a className='site-logo'>
               <Image
                 src="/images/logo.svg"
                 alt="Joyday Logo"
                 width={120}
                 height={20}
               />
-            </div>
+            </a>
           </Link>
           <a href='https://www.brianagude.com'>
             <Image
@@ -41,91 +41,84 @@ export const Header = () => {
           </a>
         </div>
       </header>
+      
+      <div className={`slide-in-menu ${showMenu && 'active'}`}>
+        <div className='container'>
+        <nav class='site-nav'>
+          <a href='/' class='nav-link'>
+            <Image
+              src="/images/home-yellow.svg"
+              alt="Home Icon"
+              width={24}
+              height={24}
+            />
+            Home
+          </a>
+          <a href='/' class='nav-link'>
+            <Image
+              src="/images/info-yellow.svg"
+              alt="Information Icon"
+              width={24}
+              height={24}
+            />
+            About
+          </a>
+          <a href='/' class='nav-link'>
+            <Image
+              src="/images/tv-yellow.svg"
+              alt="TV Icon"
+              width={24}
+              height={24}
+            />
+            JOYDAY TV
+          </a>
+          <Link 
+            href="/"
+          >
+            <a className="nav-link">
+              <Image
+                src="/images/books-yellow.svg"
+                alt="Dictionary Terms"
+                width={24}
+                height={24}
+              />
+              <b>Dictionary</b>
+            </a>
+          </Link>
+          <a href='/' class='nav-link'>
+            <Image
+              src="/images/cart-yellow.svg"
+              alt="Shop Icon"
+              width={24}
+              height={24}
+            />
+            Shop
+          </a>
+          <a href='/' class='nav-link'>
+            <Image
+              src="/images/mail-yellow.svg"
+              alt="Mail Icon"
+              width={24}
+              height={24}
+            />
+            Contact
+          </a>
+          <a href='/' class='nav-link'>
+            <Image
+              src="/images/question-yellow.svg"
+              alt="FAQ"
+              width={24}
+              height={24}
+            />
+            FAQ
+          </a>
 
-      {showMenu && (
-        <div className='header-menu'>
-          <div className='container'>
-            <button className='menu-toggle' onClick={()=>setShowMenu(false)}>
-              Close
-            </button>
-          
-          <nav class='site-nav'>
-            <a href='/' class='nav-link'>
-              <Image
-                src="/images/home.svg"
-                alt="Home Icon"
-                width={24}
-                height={24}
-              />
-              Home
-            </a>
-            <a href='/' class='nav-link'>
-              <Image
-                src="/images/info.svg"
-                alt="Information Icon"
-                width={24}
-                height={24}
-              />
-              About
-            </a>
-            <a href='/' class='nav-link'>
-              <Image
-                src="/images/tv.svg"
-                alt="TV Icon"
-                width={24}
-                height={24}
-              />
-              JOYDAY TV
-            </a>
-            <Link 
-              href="/"
-              className="nav-link"
-            >
-              <div>
-                <Image
-                  src="/images/books.svg"
-                  alt="Dictionary Terms"
-                  width={24}
-                  height={24}
-                />
-                <b>Dictionary</b>
-              </div>
-            </Link>
-            <a href='/' class='nav-link'>
-              <Image
-                src="/images/cart.svg"
-                alt="Shop Icon"
-                width={24}
-                height={24}
-              />
-              Shop
-            </a>
-            <a href='/' class='nav-link'>
-              <Image
-                src="/images/mail.svg"
-                alt="Mail Icon"
-                width={24}
-                height={24}
-              />
-              Contact
-            </a>
-            <a href='/' class='nav-link'>
-              <Image
-                src="/images/question.svg"
-                alt="FAQ"
-                width={24}
-                height={24}
-              />
-              FAQ
-            </a>
-
-            <a className='btn' href='/'>
-              Check In
-            </a>
-          </nav>
-          </div>
+          <a className='btn' href='/'>
+            Check In
+          </a>
+        </nav>
         </div>
-      )}
+      </div>
     </>
   )
 }
