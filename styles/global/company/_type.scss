@@ -19,6 +19,26 @@ p, a, span, div, li {
   line-height: 1.2;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span,
+div,
+li,
+strong,
+b,
+i,
+u {
+  &::selection {
+      background: lighten($secondary, 20%);
+    }
+}
+
 %h1, h1, .h1 {
   font-size: 48px;
 }

@@ -19,7 +19,9 @@ export default function post({ post, posts }) {
         <SidebarLeft/>
         <Header/>
         <div className='content-wrapper'>
-          <h2 className='title'>{post.fields.name}</h2>
+          <div className='intro'>
+            <h3>{post.fields.name}</h3>
+          </div>
           <div className='dictionary-wrapper'>
             <div className="dictionary-item">
               <div className="item-header">

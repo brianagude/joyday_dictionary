@@ -17,9 +17,12 @@ export default function Home({posts}) {
       </Head>
       <main>
         <SidebarLeft/>
+        <Header/>
         <div className='content-wrapper'>
-          <Header/>
-          <h2 className='title'>JOYDAY Dictionary</h2>
+          <div className='intro'>
+            <h3>Welcome to JOYDAY Dictionary</h3>
+            <p>lil blurb about joyday dictionary</p>
+          </div>
           <div className="dictionary-terms">
             {posts.reverse().map(post => (
               <Link 
@@ -32,8 +35,8 @@ export default function Home({posts}) {
                   <Image
                     src="/images/arrow.svg"
                     alt="Arrow Icon"
-                    width={24}
-                    height={24}
+                    width={20}
+                    height={20}
                   />
                 </div>
               </Link>

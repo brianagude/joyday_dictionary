@@ -6,16 +6,18 @@ export const SidebarRight = () => {
     <div id='rightbar' className='sidebar-right sidebar'>
       <div className="container">
         <form className='email-capture'>
-          <label htmlFor='email'></label>
-          <input type='text' name='email' placeholder='hello@joyday.org'></input>
-          <button type='submit' className='btn-submit'>
-           <Image
-              src="/images/arrow-brown.svg"
-              alt="brown right arrow"
-              width={16}
-              height={14}
-            />
-          </button>
+          <label htmlFor='email'>Join Our Email List</label>
+          <div className='input-wrapper'>
+            <input type='text' name='email' placeholder='hello@joyday.org'></input>
+            <button type='submit' className='btn-submit'>
+            <Image
+                src="/images/arrow-brown.svg"
+                alt="brown right arrow"
+                width={16}
+                height={14}
+              />
+            </button>
+          </div>
         </form>
         <div className='nav-copyright'>
           <nav className='social-links'>
