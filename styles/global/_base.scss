@@ -12,9 +12,26 @@ main {
   padding: 16px;
   
   @include bp(md){
-    display: grid;
-    grid-template-columns: 0.33fr 1fr 0.33fr;
-    grid-gap: 16px;
+    // display: grid;
+    // grid-template-columns: 0.33fr 1fr 0.33fr;
+    // grid-gap: 16px;
+    display: flex;
+    position: relative;
+    gap: 16px;
+
+    .sidebar {
+      width: 240px;
+      position: sticky;
+      top: 16px;
+    }
+
+    .content-wrapper { flex: 1; }
+  }
+
+  @include bp(lg){
+    .sidebar {
+      width: 300px;
+    }
   }
 }
 

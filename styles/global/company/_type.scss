@@ -35,8 +35,8 @@ b,
 i,
 u {
   &::selection {
-      background: lighten($secondary, 20%);
-    }
+    background: lighten($secondary, 20%);
+  }
 }
 
 %h1, h1, .h1 {

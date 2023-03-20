@@ -24,7 +24,7 @@ export default function Home({posts}) {
             <p>lil blurb about joyday dictionary</p>
           </div>
           <div className="dictionary-terms">
-            {posts.reverse().map(post => (
+            {posts.map(post => (
               <Link 
                 key={post.id} 
                 href={post.route}

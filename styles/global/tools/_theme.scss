@@ -186,7 +186,14 @@ footer {
   width: 100%;
 
   p { margin-top: 12px; }
+
+  h3 {
+    @include bp(small-only){
+      font-size: 24px;
+    }
+  }
 }
+
 
 .email-capture {
   .input-wrapper {
@@ -194,7 +201,7 @@ footer {
     align-items: center;
     grid-template-columns: 1fr 54px;
     overflow: hidden;
-    border: 1px solid #A37A56;
+    border: $standard-border;
     border-radius: 40px;
   }
 
@@ -204,12 +211,12 @@ footer {
     text-align: center;
     color: $black;
     width: 100%;
-    margin-bottom: 8px; 
+    margin-bottom: 8px;
     display: block;
   }
 
-  input[type=text]{
-    @extend %t2;
+  input[type=text] {
+    @extend %t3;
     color: $brown;
     width: 100%;
     border: none;
@@ -219,14 +226,16 @@ footer {
     height: 35px;
 
     &::placeholder {
-      @extend %t2;
+      @extend %t3;
       font-family: $font-text;
       color: lighten($brown, 20%);
+      // color: $color-brown-light;
       font-weight: 300;
     }
 
     &:focus {
       background: lighten($brown, 40%);
+      // background: $color-brown-light;
     }
   }
 
@@ -241,7 +250,9 @@ footer {
       cursor: pointer;
       background: $primary;
 
-      img { transform: translateX(2px); }
+      img {
+        transform: translateX(2px);
+      }
     }
   }
 }

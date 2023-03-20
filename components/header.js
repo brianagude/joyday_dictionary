@@ -44,8 +44,8 @@ export const Header = () => {
       
       <div className={`slide-in-menu ${showMenu && 'active'}`}>
         <div className='container'>
-        <nav class='site-nav'>
-          <a href='/' class='nav-link'>
+        <nav className='site-nav'>
+          <a href='/' className='nav-link'>
             <Image
               src="/images/home-yellow.svg"
               alt="Home Icon"
@@ -54,7 +54,7 @@ export const Header = () => {
             />
             Home
           </a>
-          <a href='/' class='nav-link'>
+          <a href='/' className='nav-link'>
             <Image
               src="/images/info-yellow.svg"
               alt="Information Icon"
@@ -63,7 +63,7 @@ export const Header = () => {
             />
             About
           </a>
-          <a href='/' class='nav-link'>
+          <a href='/' className='nav-link'>
             <Image
               src="/images/tv-yellow.svg"
               alt="TV Icon"
@@ -85,7 +85,7 @@ export const Header = () => {
               <b>Dictionary</b>
             </a>
           </Link>
-          <a href='/' class='nav-link'>
+          <a href='/' className='nav-link'>
             <Image
               src="/images/cart-yellow.svg"
               alt="Shop Icon"
@@ -94,7 +94,7 @@ export const Header = () => {
             />
             Shop
           </a>
-          <a href='/' class='nav-link'>
+          <a href='/' className='nav-link'>
             <Image
               src="/images/mail-yellow.svg"
               alt="Mail Icon"
@@ -103,7 +103,7 @@ export const Header = () => {
             />
             Contact
           </a>
-          <a href='/' class='nav-link'>
+          <a href='/' className='nav-link'>
             <Image
               src="/images/question-yellow.svg"
               alt="FAQ"
