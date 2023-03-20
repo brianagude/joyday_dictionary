@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Head from 'next/head';
 import getPosts from "../lib/getPosts";
 import Link from 'next/link'
@@ -10,45 +10,44 @@ import { SidebarLeft } from '../components/sidebar-left'
 import { SidebarRight } from '../components/sidebar-right'
 
 export default function post({ post, posts }) {
-  const [nextTerm, setNextTerm] = useState(['a', 'b']);
-  const [prevTerm, setPrevTerm] = useState(['a', 'b']);
-  // const [nextRoute, setNextRoute] = useState('');
-  // const [prevRoute, setPrevRoute] = useState('');
+  // const [nextText, setNextText] = useState('Adhd');
+  // const [prevText, setPrevText] = useState('Adhd');
+  // const [nextRoute, setNextRoute] = useState('adhd');
+  // const [prevRoute, setPrevRoute] = useState('adhd');
 
   
-  var arrayOfPosts = [];
+  // var arrayOfPosts = [];
 
-  for(var i=0; i<posts.length; i++){
-    const termName = posts[i].fields.name
-    const termRoute = posts[i].route
-    arrayOfPosts.push({termName, termRoute});
-  }
+  // for(var i=0; i<posts.length; i++){
+  //   const term = posts[i]
+  //   arrayOfPosts.push(term);
+  // }
 
-  var i = arrayOfPosts.indexOf(post.fields.name)
-  console.log(i)
-  console.log(arrayOfPosts)
-  console.log(post)
+  // var i = arrayOfPosts.indexOf(post)
+  // console.log(i)
+  // console.log(arrayOfPosts)
+  // console.log(post)
 
-  // useEffect(() => {
-  //   setNextRoute('')
-  //   setNextText('')
-  //   setPrevRoute('')
-  //   setPrevText('')
-
+  // const setTerms = () => {
   //   i = i + 1;
   //   i = i % posts.length;
 
   //   setNextRoute(posts[i].route)
   //   setNextText(posts[i].fields.name)
+  //   console.log(i)
 
-  //   if (i === 0) {
-  //     i = posts.length;
-  //   }
+    // if (i === 0) {
+    //   i = posts.length;
+    // }
 
-  //   i = i - 2;
+    // i = i - 2;
 
-  //   setPrevRoute(posts[i].route)
-  //   setPrevText(posts[i].fields.name)
+    // setPrevRoute(posts[i].route)
+    // setPrevText(posts[i].fields.name)
+  // }
+
+  // useEffect(() => {
+  //   setTerms()
   // }, []);
 
   // console.log(posts)
@@ -70,7 +69,7 @@ export default function post({ post, posts }) {
           {/* <div className="nav">
               <Link 
                 key={post.id} 
-                href={'/'}
+                href={'/'+prevRoute}
               >
                 <a>
                   <Image
@@ -80,15 +79,15 @@ export default function post({ post, posts }) {
                     height={14}
                     className='term-arrow-left'
                   />
-                  Prev
+                  {prevText}
                 </a>
               </Link>
               <Link 
                 key={post.id} 
-                href={'/'}
+                href={'/'+nextRoute}
               >
                 <a>
-                  Next
+                  {nextText}
                   <Image
                     src="/images/black-arrow-right.svg"
                     alt="menu icon"
