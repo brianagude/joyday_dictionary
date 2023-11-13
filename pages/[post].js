@@ -10,47 +10,10 @@ import { SidebarLeft } from '../components/sidebar-left'
 import { SidebarRight } from '../components/sidebar-right'
 
 export default function post({ post, posts }) {
-  // const [nextText, setNextText] = useState('Adhd');
-  // const [prevText, setPrevText] = useState('Adhd');
-  // const [nextRoute, setNextRoute] = useState('adhd');
-  // const [prevRoute, setPrevRoute] = useState('adhd');
+  const currentIndex = posts.findIndex((item) => item.id === post.id);
 
-  
-  // var arrayOfPosts = [];
-
-  // for(var i=0; i<posts.length; i++){
-  //   const term = posts[i]
-  //   arrayOfPosts.push(term);
-  // }
-
-  // var i = arrayOfPosts.indexOf(post)
-  // console.log(i)
-  // console.log(arrayOfPosts)
-  // console.log(post)
-
-  // const setTerms = () => {
-  //   i = i + 1;
-  //   i = i % posts.length;
-
-  //   setNextRoute(posts[i].route)
-  //   setNextText(posts[i].fields.name)
-  //   console.log(i)
-
-    // if (i === 0) {
-    //   i = posts.length;
-    // }
-
-    // i = i - 2;
-
-    // setPrevRoute(posts[i].route)
-    // setPrevText(posts[i].fields.name)
-  // }
-
-  // useEffect(() => {
-  //   setTerms()
-  // }, []);
-
-  // console.log(posts)
+  const prevTerm = currentIndex > 0 ? posts[currentIndex - 1] : null;
+  const nextTerm = currentIndex < posts.length - 1 ? posts[currentIndex + 1] : null;
 
   return (
     <div className="term-page">
@@ -62,42 +25,8 @@ export default function post({ post, posts }) {
         <SidebarLeft/>
         <Header/>
         <div className='content-wrapper'>
-          <div className='intro-nav-wrapper'>
           <div className='intro'>
             <h3>{post.fields.name}</h3>
-          </div>
-          {/* <div className="nav">
-              <Link 
-                key={post.id} 
-                href={'/'+prevRoute}
-              >
-                <a>
-                  <Image
-                    src="/images/black-arrow-left.svg"
-                    alt="menu icon"
-                    width={16}
-                    height={14}
-                    className='term-arrow-left'
-                  />
-                  {prevText}
-                </a>
-              </Link>
-              <Link 
-                key={post.id} 
-                href={'/'+nextRoute}
-              >
-                <a>
-                  {nextText}
-                  <Image
-                    src="/images/black-arrow-right.svg"
-                    alt="menu icon"
-                    width={16}
-                    height={14}
-                    className='term-arrow-right'
-                  />
-                </a>
-              </Link>
-            </div> */}
           </div>
 
           <div className='dictionary-wrapper'>
@@ -184,7 +113,7 @@ export default function post({ post, posts }) {
                                   href={item.route}
                                 >
                                   <li>
-                                    <a>{item.fields.name}</a>
+                                    <a><span>{item.fields.name}</span></a>
                                   </li>
                                 </Link>
                               )
@@ -196,6 +125,24 @@ export default function post({ post, posts }) {
                   </div>
                 }
               {/* </div> */}
+
+              <div className="dictionary-item pagination-wrapper">
+                <div className="item-header">
+                  <h5>Ready for more?</h5>
+                </div>
+                <div className='item-content'>
+                    {prevTerm && (
+                      <Link href={prevTerm.route}>
+                        <a className="prev-button">Previous: <u>{prevTerm.fields.name}</u></a>
+                      </Link>
+                    )}
+                    {nextTerm && (
+                      <Link href={nextTerm.route}>
+                        <a className="next-button">Next: <u>{nextTerm.fields.name}</u></a>
+                      </Link>
+                    )}
+                </div>
+              </div>
             
           </div>
         <Footer/>

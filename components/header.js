@@ -54,15 +54,6 @@ export const Header = () => {
             />
             Home
           </a>
-          <a href='https://www.joyday.org/pages/about' className='nav-link'>
-            <Image
-              src="/images/info-yellow.svg"
-              alt="Information Icon"
-              width={24}
-              height={24}
-            />
-            About
-          </a>
           <a href='https://www.joyday.org/pages/joyday-tv' className='nav-link'>
             <Image
               src="/images/tv-yellow.svg"
@@ -94,6 +85,18 @@ export const Header = () => {
             />
             Shop
           </a>
+          <a href='https://www.joyday.org/pages/about' className='nav-link'>
+            <Image
+              src="/images/info-yellow.svg"
+              alt="Information Icon"
+              width={24}
+              height={24}
+            />
+            About
+          </a>
+
+          
+          
           <a href='https://www.joyday.org/pages/contact' className='nav-link'>
             <Image
               src="/images/mail-yellow.svg"
@@ -111,6 +114,15 @@ export const Header = () => {
               height={24}
             />
             FAQ
+          </a>
+          <a href='https://www.joyday.org/cart'>
+            <Image
+              src="/images/cart.svg"
+              alt="cart icon"
+              width={24}
+              height={24}
+              className="open-icon"
+            />
           </a>
 
           <a className='btn' href='https://joyday.typeform.com/check-in'>
