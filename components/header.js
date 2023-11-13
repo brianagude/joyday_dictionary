@@ -19,7 +19,7 @@ export const Header = () => {
             />
           </button>
           <Link 
-            href="/"
+            href="https://www.joyday.org"
           >
             <a className='site-logo'>
               <Image
@@ -30,7 +30,7 @@ export const Header = () => {
               />
             </a>
           </Link>
-          <a href='https://www.brianagude.com'>
+          <a href='https://www.joyday.org/cart'>
             <Image
               src="/images/cart.svg"
               alt="cart icon"
@@ -45,7 +45,7 @@ export const Header = () => {
       <div className={`slide-in-menu ${showMenu && 'active'}`}>
         <div className='container'>
         <nav className='site-nav'>
-          <a href='/' className='nav-link'>
+          <a href='https://www.joyday.org/' className='nav-link'>
             <Image
               src="/images/home-yellow.svg"
               alt="Home Icon"
@@ -54,7 +54,7 @@ export const Header = () => {
             />
             Home
           </a>
-          <a href='/' className='nav-link'>
+          <a href='https://www.joyday.org/pages/about' className='nav-link'>
             <Image
               src="/images/info-yellow.svg"
               alt="Information Icon"
@@ -63,7 +63,7 @@ export const Header = () => {
             />
             About
           </a>
-          <a href='/' className='nav-link'>
+          <a href='https://www.joyday.org/pages/joyday-tv' className='nav-link'>
             <Image
               src="/images/tv-yellow.svg"
               alt="TV Icon"
@@ -85,7 +85,7 @@ export const Header = () => {
               <b>Dictionary</b>
             </a>
           </Link>
-          <a href='/' className='nav-link'>
+          <a href='https://www.joyday.org/collections/all' className='nav-link'>
             <Image
               src="/images/cart-yellow.svg"
               alt="Shop Icon"
@@ -94,7 +94,7 @@ export const Header = () => {
             />
             Shop
           </a>
-          <a href='/' className='nav-link'>
+          <a href='https://www.joyday.org/pages/contact' className='nav-link'>
             <Image
               src="/images/mail-yellow.svg"
               alt="Mail Icon"
@@ -103,7 +103,7 @@ export const Header = () => {
             />
             Contact
           </a>
-          <a href='/' className='nav-link'>
+          <a href='https://www.joyday.org/pages/faq' className='nav-link'>
             <Image
               src="/images/question-yellow.svg"
               alt="FAQ"
@@ -113,7 +113,7 @@ export const Header = () => {
             FAQ
           </a>
 
-          <a className='btn' href='/'>
+          <a className='btn' href='https://joyday.typeform.com/check-in'>
             Check In
           </a>
         </nav>

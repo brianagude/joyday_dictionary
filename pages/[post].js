@@ -101,7 +101,7 @@ export default function post({ post, posts }) {
           </div>
 
           <div className='dictionary-wrapper'>
-            <div className="item-wrapper">
+            {/* <div className="item-wrapper"> */}
               <div className="dictionary-item">
                 <div className="item-header">
                   <h5>Definition</h5>
@@ -121,7 +121,7 @@ export default function post({ post, posts }) {
                   </div>
                 </div>
               }
-            </div>    
+            {/* </div>     */}
 
             {post.fields.examples && 
               <div className="dictionary-item">
@@ -156,7 +156,7 @@ export default function post({ post, posts }) {
                 </div>
               }
 
-              <div className="item-wrapper">
+              {/* <div className="item-wrapper"> */}
                 {post.fields.sources && 
                   <div className="dictionary-item">
                     <div className="item-header">
@@ -169,7 +169,7 @@ export default function post({ post, posts }) {
                 }
 
                 {post.fields.related_terms && 
-                  <div className="dictionary-item">
+                  <div className="dictionary-item related-terms">
                     <div className="item-header">
                       <h5>Related Terms</h5>
                     </div>
@@ -195,7 +195,7 @@ export default function post({ post, posts }) {
                     </div>
                   </div>
                 }
-              </div>
+              {/* </div> */}
             
           </div>
         <Footer/>
