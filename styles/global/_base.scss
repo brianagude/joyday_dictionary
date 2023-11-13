@@ -10,6 +10,8 @@ main {
   width: 100vw;
   min-height: 100vh;
   padding: 16px;
+  max-width: 1440px;
+  margin: 0 auto;
   
   @include bp(md){
     // display: grid;
@@ -33,6 +35,10 @@ main {
       width: 300px;
     }
   }
+}
+
+button {
+  font-family: $font-text;
 }
 
 h1,

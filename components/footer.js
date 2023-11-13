@@ -31,7 +31,7 @@ export const Footer = () => {
         </form>
         <div className='nav-copyright'>
           <nav className='social-links'>
-            <a href='https://www.brianagude.com'>
+            <a href='https://twitter.com/JOYdayMovement'>
               <Image
                 src="/images/twitter.svg"
                 alt="twitter icon"
@@ -40,7 +40,7 @@ export const Footer = () => {
                 className='site-logo'
               />
             </a>
-            <a href='https://www.brianagude.com'>
+            <a href='https://www.instagram.com/joydaymovement/?hl=en'>
               <Image
                 src="/images/instagram.svg"
                 alt="instagram icon"
@@ -49,7 +49,7 @@ export const Footer = () => {
                 className='site-logo'
               />
             </a>
-            <a href='https://www.brianagude.com'>
+            <a href='https://www.facebook.com/JOYdayMovement/'>
               <Image
                 src="/images/facebook.svg"
                 alt="facebook icon"
@@ -58,7 +58,7 @@ export const Footer = () => {
                 className='site-logo'
               />
             </a>
-            <a href='https://www.brianagude.com'>
+            <a href='mailto:info@joyday.org'>
               <Image
                 src="/images/mail.svg"
                 alt="mail icon"

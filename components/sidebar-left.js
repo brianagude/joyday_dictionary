@@ -7,7 +7,7 @@ export const SidebarLeft = () => {
   return (
     <div id='leftbar' className='sidebar-left sidebar'>
       <div className="container">
-        <a href='https://www.brianagude.com'>
+        <a href="https://www.joyday.org">
           <Image
             src="/images/logo.svg"
             alt="Joyday Logo"
@@ -18,7 +18,7 @@ export const SidebarLeft = () => {
         </a>
         
         <nav className='site-nav'>
-          <a href='/' className='nav-link'>
+          <a href='https://www.joyday.org/' className='nav-link'>
             <Image
               src="/images/home.svg"
               alt="Home Icon"
@@ -27,16 +27,7 @@ export const SidebarLeft = () => {
             />
             Home
           </a>
-          <a href='/' className='nav-link'>
-            <Image
-              src="/images/info.svg"
-              alt="Information Icon"
-              width={24}
-              height={24}
-            />
-            About
-          </a>
-          <a href='/' className='nav-link'>
+          <a href='https://www.joyday.org/pages/joyday-tv'  className='nav-link'>
             <Image
               src="/images/tv.svg"
               alt="TV Icon"
@@ -48,7 +39,7 @@ export const SidebarLeft = () => {
           <Link 
             href="/"
           >
-            <a className="nav-link dictionary-link">
+            <a className="nav-link">
               <Image
                 src="/images/books.svg"
                 alt="Dictionary Terms"
@@ -58,16 +49,30 @@ export const SidebarLeft = () => {
               <b>Dictionary</b>
             </a>
           </Link>
-          <a href='/' className='nav-link'>
+
+          
+          <a href='https://www.joyday.org/collections/all'  className='nav-link'>
             <Image
-              src="/images/cart.svg"
-              alt="Shop Icon"
+              src="/images/brain.svg"
+              alt="Brain Icon"
               width={24}
               height={24}
             />
             Shop
           </a>
-          <a href='/' className='nav-link'>
+
+          <a href='https://www.joyday.org/pages/about' className='nav-link'>
+            <Image
+              src="/images/info.svg"
+              alt="Information Icon"
+              width={24}
+              height={24}
+            />
+            About
+          </a>
+          
+          
+          <a href='https://www.joyday.org/pages/contact' className='nav-link'>
             <Image
               src="/images/mail.svg"
               alt="Mail Icon"
@@ -76,7 +81,7 @@ export const SidebarLeft = () => {
             />
             Contact
           </a>
-          <a href='/' className='nav-link'>
+          <a href='https://www.joyday.org/pages/faq' className='nav-link'>
             <Image
               src="/images/question.svg"
               alt="FAQ"
@@ -85,6 +90,16 @@ export const SidebarLeft = () => {
             />
             FAQ
           </a>
+          <a href='/' className='nav-link'>
+            <Image
+              src="/images/cart.svg"
+              alt="Shop Icon"
+              width={24}
+              height={24}
+            />
+            Cart
+          </a>
+          
         </nav>
         <a className='btn' href='https://joyday.typeform.com/check-in'>
           Check In
